@@ -17,23 +17,23 @@
     </v-toolbar>
 
     <v-content>
-      <HelloWorld/>
+      <router-view></router-view>
     </v-content>
   </v-app>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld'
+<script lang="ts">
+  import { Component, Vue } from 'vue-property-decorator';
+  import HelloWorld from '@/components/pages/HelloWorld.vue'; // @ is an alias to /src
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  },
-  data () {
-    return {
-      //
+  @Component({
+    components: {
+
+    },
+  })
+  export default class App extends Vue {
+    constructor() {
+      super();
     }
   }
-}
 </script>
