@@ -2,17 +2,22 @@
   <v-app>
     <v-toolbar app>
       <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify {{appTitle}}</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
+        <v-icon large>mdi-fast-forward</v-icon>
+        <span> {{appTitle}},</span>
+        <span class="font-weight-light"> BITCH</span>
       </v-toolbar-title>
-      <v-spacer></v-spacer>
+      <v-spacer></v-spacer>      
       <v-btn
         flat
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
+        href="sign-up"
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+        <span class="mr-2">Create your account</span> 
+      </v-btn>
+      <v-btn
+        flat
+        href="sign-in"
+      >
+        <span class="mr-2">Log in</span>
       </v-btn>
     </v-toolbar>
 
@@ -32,7 +37,7 @@
     },
   })
   export default class App extends Vue {
-    public appTitle: string = 'My App';
+    public appTitle: string = '';
     constructor() {
       super();
     }
